@@ -1,0 +1,4 @@
+answer = input ("where were you on the night of the murder: ")
+print("so you were in" + answer + "why were you seen on the campus in Utah then: ")
+answer2 = input 
+print(answer2 + "pretty good alabi")
