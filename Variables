@@ -1,0 +1,16 @@
+# variables
+name = "katie"
+
+print ("hello " +name)
+
+#reset variable
+name = "Alex"
+print ("sorry I meant " +name)
+
+
+# einonder variable
+age = 14
+print("wow you're", age)
+print("Oh wait your birthday was yesterday!")
+age += 1
+print("so you're ", age)
