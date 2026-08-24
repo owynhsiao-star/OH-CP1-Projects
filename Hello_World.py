@@ -1,2 +1,3 @@
 # Owyn Hsiao, first project
-print("hello World or something")
+name = input("What is your name?: ")
+print("Hello, " +name)
