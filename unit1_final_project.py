@@ -1,6 +1,6 @@
 #Owyn Hsiao, unit 1 final project assignment
 
-name = input ("What is you name: ")
+name = input ("What is your name: ")
 age = input ("How old are you: ")
 boardgame = input ("What is you favorite boardgame: ")
 color = input ("What is your favorite color: ")
