@@ -1,1 +1,2 @@
- ")
+ooking and baking, so you need to " +verb+ ". After you " +verb+ " you need to get a " +fish+ " and rub it on the outside of the pot. But make sure not to let the pot touch the floor or it will start to " +verb+ "while" +verb2+ "ing. 
+print(madlib)
