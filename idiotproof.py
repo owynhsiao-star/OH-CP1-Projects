@@ -7,17 +7,27 @@ firstfixed="".join(firstseperated)
 lastseperated=lastname.split()
 lastfixed="".join(lastseperated)
 fullname=firstfixed.title() + " " +lastfixed.title()
-print("Name: " + fullname)
+
 
 while True:
-    try:
-        phone=int(input("What is your phone number? "))
-    except:
-        print("Phone NUMBER without dashes")
-    else:
-        break
-    space=" "
-phone=phone[3]+
-print(f"phone number: " +phone)
+    phone=(input("What is your phone number? "))
+    if len(phone)==10:
+        if phone.isdigit():
+            break
+    print("Only numbers, exactly ten letters, no spaces or dashes")
+fixed = phone[:3] + " " + phone[3:6] + " " + phone[6:]
 
 
+while True:
+    gpa=(input("What is your gpa? "))
+    if "." in gpa:
+        parts=gpa.split(".")
+        if len(parts)==2:
+            if parts[0].isdigit()and parts [1].isdigit():
+                num=float(gpa)
+                break
+    print("Must be a valid number with a decimal because it's a GPA, try again")
+
+print("Name: " + fullname)
+print("Phone: " +fixed)
+print("GPA: ", num)
