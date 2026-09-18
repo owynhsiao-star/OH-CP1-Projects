@@ -1,30 +1,31 @@
 #OH, period 1 Debugging with the debugger
 # Ravager Snack Bar
 import random
-while True:
-    try:
-        pirate_name = str(input("What's your name, pirate? "))
-        snack_name = str(input("What snack do you want? "))
-        if:
-        pirate_name==int
-        else:
-        print("Please input a word")
-        break
+
+pirate_name = input("What's your name, pirate? ")
+pirate_name: int
+print("Please input a word")
+
+snack_name = input("What snack do you want? ")
 
 price = random.randint(2, 8)  # random price in credits
-while True: #You have to add a while True loop to make sure they give you a number
+while True: #there needs to be a while true loop to make sure they input a number
     try:
-        quantity = (input("How many would you like? "))
+        quantity = int(input("How many would you like? "))
     except:
-        print("Please input a number")
+        print("please input a number")
     else:
         break
-total = quantity * price
-discounted_total = total - total * 0.10 #change 2 to total
+
+total = price * quantity
+
+discounted_total = total - total * 0.10 #2 needs to be changed to total
+
 tax_rate = 0.08
 total_with_tax = discounted_total + (discounted_total * tax_rate)
+
 print("Hello, " + pirate_name + "! Here's your order summary:")
-print("Snack: " + snack_name) #snack_name needs to be the same here as in the variable 
+print("Snack: " + snack_name) #this needs to have the variable snack_name not snackName
 print("Price per snack: " + str(price) + " credits")
-print("Total before tax: " + str(discounted_total)+" credits")#you need to put total here not price
-print("Total with tax: " + str(round(total_with_tax, 2)) + " credits") # Fixed syntax error: They forgot to add a )
+print("Total before tax: " + str(discounted_total))#This should be discounted_total not price
+print("Total with tax: " + str(round(total_with_tax, 2)) + " credits") #There needs to be a ) here
