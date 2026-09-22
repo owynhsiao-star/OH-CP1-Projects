@@ -7,7 +7,7 @@ while True:
     else:
         break
 import random
-randnum=random.randint(0,5000)
+randnum=random.randint(500,5000)
 numsubtract=crewsize*3
 randnumnew=randnum-numsubtract
 yonducut=randnumnew*.13
