@@ -18,7 +18,8 @@ fullcrew=crewsize+2
 crewshares=randnumnewest/fullcrew
 yondushare=yonducut+crewshares
 petershare=petercut+crewshares
-print(f'Yondu\'s share: '+ str(yondushare))
-print(f"peter\'s share: " + str(petershare))
-print(f"crew member\'s shares: " + str(crewshares))
+print(f"Unit number: " + str(randnum))
+print(f'Yondu\'s share: '+ str(round(yondushare, 2)))
+print(f"peter\'s share: " + str(round(petershare, 2)))
+print(f"crew member\'s shares: " + str(round(crewshares, 2)))
 
