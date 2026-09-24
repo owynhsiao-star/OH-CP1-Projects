@@ -13,4 +13,9 @@ if aske==pasword:
     print("Password is correct")
 else:
     print("Learn your own password")
+if bool(proceedings)==True and bool(proceedenings)==True:
+    print("Welcome " + username)
+else:
+    print("NOT welcome")
+
 
