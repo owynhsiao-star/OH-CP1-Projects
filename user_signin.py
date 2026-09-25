@@ -11,7 +11,7 @@ if aske==pasword:
     print("Password is correct")
 else:
     print("Learn your own password")
-if ask==username and aske == pasword:
+if ask==username and aske == pasword: 
     print("Welcome to the program " + username+"!")
 else:
     print("NOT welcome")
