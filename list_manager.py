@@ -1,18 +1,29 @@
 # OH period 1 Shopping List Manager
 
-shoplist=["Eggs", "hydrocortisol", "milk", "five guys sign"]
+shoplist=["Eggs", "Hydrocortisol", "Milk", "\"Five guys sign\""]
 while True:
-    action = input("What would you like to do? (add, remove, view, exit) ")
-    if action=="add":
-        listnew=input("What would you like to add to the shopping list? ")
+    action = input("What would you like to do? (add, remove, view, exit) ").strip().capitalize()
+    if action=="Add":
+        listnew=input("What would you like to add to the shopping list? ").capitalize()
         shoplist.append(listnew)
         print(*shoplist)
-    elif action=="remove":
+    elif action=="Remove":
         print(*shoplist)
-        removal=input("What do you wanna remove? ")
-        shoplist.remove(removal)
+        removal=input("What do you wanna remove? ").capitalize()
+        while True:
+            if removal in shoplist:
+                shoplist.remove(removal)
+                print(*shoplist)
+                break
+            else:
+                print("Please input something in the list")
+                removal=input("What do you wanna remove? ").capitalize()
+    elif action=="View":
         print(*shoplist)
-    elif action=="view":
-        print(*shoplist)
-    elif action==exit:
-        print("Have a nice trip to walmart")
+    elif action=="Exit":       
+        break
+    else: 
+        print("Please input one of the predetermined options")
+        action=input("What would you like to do? (add, remove, view, exit)").strip().capitalize
+print("Have a nice trip to walmart")
+    
