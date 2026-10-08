@@ -1,4 +1,4 @@
-
+import math
 def times(number):
     return number*2
 #This is how you create a function btw
