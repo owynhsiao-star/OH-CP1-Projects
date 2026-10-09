@@ -6,7 +6,7 @@ while True:
     try:
         numme=int(input("What number do you want? (positive) "))
     except: 
-        print("Positive number please")        
+        print("Positive number please                                                                                                                                                                                                                                                                                                                                 ")        
     else:
         break
 if numme<0:
@@ -17,6 +17,10 @@ if numme==0:
 if numme>0:
     numme2=range(1,(numme+1)) 
     for num in range(1, numme+1):
-        print(num, end=" ")
-numme2=map(facto, numme)
-print(list(numme2))
+        if num<numme:
+             print(num, end=" * ")
+        if num==numme:
+            print(num, end="=")
+            print(math.factorial(num))
+    numme2=map(facto, numme2)
+    print(*numme2)
