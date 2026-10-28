@@ -15,7 +15,7 @@ elif grade>=70:
 else:
     print("Ew")
 #Very top line of a boolean should be the least possible answer
-raining==False
+raining=False
 if raining:
     print("bring me an umbrella")
 else:
