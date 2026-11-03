@@ -39,7 +39,7 @@ def birthday(name, age): #you can have multiple parameters  and numbers but the 
     print(f"You're now {age} years old")
 birthday("owyn", "15") #The position of the argument has to match the parameter, the first goes to the first and the second goes to the second
 
-def birthday(name="Dad", age="50"): #You can have ultiple defaults, but if you set one you need to have all the parameters after also have defaults, but before doesn't matter
+def birthday(name="Dad", age="50"): #You can have multiple defaults, but if you set one you need to have all the parameters after also have defaults, but before doesn't matter
     print("Happy birthday to you")
     print("Happy Birthday to you")
     print(f"Happy birthday dear {name}")
