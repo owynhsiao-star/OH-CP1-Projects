@@ -52,3 +52,12 @@ birthday()
 #You write def, say the name with parameters, tab over on the next line and write what it does
 #Keyword: Functions should have a keyword that tells them exactly what the code does, it also takes big problems and breaks them into smaller stuff, it makes code reusable, and can be used many a time, the last is abstraction, you should be able to use a function without knowing how to use the insides by wrapping it in a name
 #Functions increase readability because they simplify large blocks of code
+
+#RETURN returns a specific value, can return as many as you want if seperated by commas but generally returns one
+
+def supidpoof(user_answer, correct_answererer):
+    user_answer=user_answer.strip().title()
+    if user_answer in correct_answererer:
+        return user_answer
+    else:
+        return False
