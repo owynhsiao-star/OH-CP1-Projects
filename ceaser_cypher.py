@@ -12,7 +12,10 @@ if whichone=="Code":
         for i in userkaput:
             numbervali=ord(i)
             nunumvali=numbervali+valienter
-            charvali=chr(ord(i)+valienter)
+            if nunumvali>114:
+                nunumvali-=114
+                break
+            charvali=chr(nunumvali)
             idex=userkaput.index(i)
             userkaput.insert(idex+1, charvali)
         print(userkaput)
