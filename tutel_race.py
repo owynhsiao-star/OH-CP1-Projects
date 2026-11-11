@@ -1,13 +1,14 @@
 import turtle as t
-import time as ti
 import random as r
 t1=t.Turtle()
 t2=t.Turtle()
 t3=t.Turtle()
 t4=t.Turtle()
 t5=t.Turtle()
+finishline=t.Turtle()
 winnini=False
 turtles={t1, t2, t3, t4, t5}
+one=[1]
 
 def colorasig(cy):
         numero=0
@@ -46,15 +47,19 @@ t5.right(90)
 t5.forward(150)
 t5.down()
 t5.left(90)
+finishline.up()
+finishline.goto(500, 500)
+finishline.down()
+finishline.right(90)
+finishline.forward(900)
+finishline.hideturtle()
+
 while True:
      for i in turtles:
-        moveval=r.randint(0,150)
         locat= i.xcor()
         if locat>500:
-            t.done 
+            print(f"YOU WIN {i}") 
+            t.done()
             break
         if locat<500:
-            for i in turtles:
-                i.forward(moveval)
-     break
-t.done()
+            i.forward(r.randint(0,300))
