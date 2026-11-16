@@ -12,22 +12,24 @@ rogue=[14, 85, rdamage, fist]
 barbarian=[(random.randint(9, 20)),16, 114, (bdamage+5), fist+5]
 wizard=[12, 78, wdamage, fist-5]
 classess=str(input('Would you like to bea wizard, a rogue, or a barbarian: ')).title().strip()
-dif=str(input("Hard, normal, or easy enemy: "))
+dif=str(input("Hard, normal, or easy enemy: ")).title().strip()
 if dif == "Hard":
     enemy="Orc"
     enhel=random.randint(100, 190)
     enda=random.randint(30, 60)
     ende=random.randint(15, 18)
-if dif == "normal":
+elif dif == "normal":
     enemy="Soldier"
     enhel=random.randint(75, 140)
     enda=random.randint(20,40)
     ende=random.randint(10, 15)
-if dif == "Easy":
+elif dif == "Easy":
     enemy="Rabbit"
     enhel=1
     enda=-1
     ende=19
+else:
+     print("Not an option")
 classes=[rogue, wizard, barbarian]
 def playturn(e):
     if classess=="Barbarian":
