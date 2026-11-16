@@ -11,8 +11,8 @@ rdamage=random.randint(1, 22)
 rogue=[14, 85, rdamage, fist]
 barbarian=[(random.randint(9, 20)),16, 114, (bdamage+5), fist+5]
 wizard=[12, 78, wdamage, fist-5]
-classess=str(input('Would you like to bea wizard, a rogue, or a barbarian')).title().strip()
-dif=str(input("Hard, normal, or easy enemy"))
+classess=str(input('Would you like to bea wizard, a rogue, or a barbarian: ')).title().strip()
+dif=str(input("Hard, normal, or easy enemy: "))
 if dif == "Hard":
     enemy="Orc"
     enhel=random.randint(100, 190)
@@ -29,9 +29,6 @@ if dif == "Easy":
     enda=-1
     ende=19
 classes=[rogue, wizard, barbarian]
-one=[random.randint(1,8) * 4]
-two=[random.randint(1,6) *8]
-three=[random.randint(1, 6) *5 +random.randint[1,4]*3]
 def playturn(e):
     if classess=="Barbarian":
         classess=barbarian
@@ -45,16 +42,18 @@ def playturn(e):
         choice=str(input("Would you like to attack, defend, or heal? ")).strip().title()
     elif classess == wizard:
         choice=str(input("Would you like to attack, cast a spell, or heal? "))
-    if choice=="Attack":
-        choiceattack=str(input("Weapon or fist")).strip().title()
-        if choiceattack=="Weapon":
-            attackroll=classess[0]
-            if attackroll>ende:
-                attackdamage=classess[3]
-        if choiceattack=="Fist":
+        if choice=="Attack":
+            choiceattack=str(input("Weapon or fist")).strip().title()
+            if choiceattack=="Weapon":
+                attackroll=classess[0]
+                if attackroll>ende:
+                    attackdamage=classess[3]
+            if choiceattack=="Fist" and not classess==wizard:
                 attackdamage=classess[4]
-    elif choice=="Defend":
+    elif choice=="Defend" and not classess==wizard:
             defense=classess[1]+5
+    elif choice =="Cast a spell":
+            spelldamage=40
     elif choice=="Heal":
             classess[2]+=5
     else:
