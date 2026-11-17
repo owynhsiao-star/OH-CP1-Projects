@@ -3,14 +3,18 @@ import random as r
 barbarian=[16, 14, 34]
 rogue=[18, 12, 30]
 fighter=[17, 16, 32]
-clas=input('What class would you like to be, barbarian, fighter, or rogue?').title().strip()
+count=0
+endgame=False
+lasturndef=False
+player=str(input("What is your name? "))
+dif=input("What would you like the difficulty to be? ").strip().title()
+clas=input('What class would you like to be, barbarian, fighter, or rogue? ').title().strip()
 if clas=="Barbarian":
     clas=barbarian
 if clas=="Rogue":
     clas=rogue
 if clas=='Fighter':
     clas=fighter
-dif=input("What would you like the difficulty to be? ").strip().title()
 if dif == "Hard":
     enemy="Orc"
     enhel=60
@@ -28,28 +32,51 @@ elif dif == "Easy":
     ende=19
 else:
      print("Not an option")
-def playturn(n):
-    bdamage=r.randint(1,10)
-    if c == "Defend":
-        dv-=5
-    c=input("would you like you like to attack, defend, heal, or flee").title().strip()
+health=clas[2]
+defense=clas[1]
+av=clas[0]
+def playturn():
+    global enda, enhel, c, clas, defense, health, ende, endgame, lasturndef
+    if lasturndef == True:
+        ende-=5
+        lasturndef=False
+    c=input("would you like you like to attack, defend, heal, or flee ").title().strip()
     if c == "Attack":
-        av=r.randint(1,(clas[0]))
+        av=r.randint(1,20)
         if av>ende:
-            enhel-=bdamage
+            enhel-=clas[0]
     elif c == "Defend":
-        dv=clas[1]
-        dv+=5
+        defense+=5
     elif c == "Heal":
-        hv=clas[2]
-        clas+=10
+        health+=10
     elif c == "Flee":
         print("You ran away")
-        break
+        endgame=True
     else:
         print ("I'm skipping your turn")
-def enturn(h):
+    if health<1:
+        print("You lose", player)
+        endgame=False
+def enturn():
+    global enhel, endgame, enda, ende
     print(enemy)
-    ch=r.randint=(1,5)
+    ch=r.randint(1,5)
     if ch == 1:
-        at=random.randint
+        print(enemy, " attacked!")
+        nuhealth=health-enda
+    elif ch == 2:
+        ende+=5
+        print("Enemy defended")
+        lasturndef=True
+    elif ch == 2:
+        enhel+=10
+    else:
+        print("It ran away")
+        endgame=True
+    if enhel<1:
+        print("You win ", player)
+        endgame=True
+while endgame==False:
+    playturn()
+    enturn()
+    count+=1
